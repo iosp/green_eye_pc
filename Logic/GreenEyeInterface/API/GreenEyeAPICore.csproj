@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE4E45CD-1781-4FA7-A69F-6FC9B8F3DB87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GreenEyeAPI.Core</RootNamespace>
+    <AssemblyName>GreenEyeAPI.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\API.cs" />
+    <Compile Include="API\APICommands\APILogicMissionsAbort.cs" />
+    <Compile Include="API\APICommands\APILogicAreas.cs" />
+    <Compile Include="API\APICommands\APILogicMissionsStop.cs" />
+    <Compile Include="API\APICommands\APILogicMissions.cs" />
+    <Compile Include="API\APICommands\APILogicMissionsWorld.cs" />
+    <Compile Include="API\APICommands\APIWorldMissions.cs" />
+    <Compile Include="API\APICommands\APIWorldMissionsAbort.cs" />
+    <Compile Include="API\APICommands\APIWorldMissionsPlatformCommand.cs" />
+    <Compile Include="API\APICommands\APIWorldMissionsUpdate.cs" />
+    <Compile Include="API\IAPICommand.cs" />
+    <Compile Include="BLInterface\LogicServerBLInterface.cs" />
+    <Compile Include="BLInterface\WorldServerBLInterface.cs" />
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="Configuration\ConfigData.cs" />
+    <Compile Include="DataStructures\Action.cs" />
+    <Compile Include="DataStructures\AreasRequestParameters.cs" />
+    <Compile Include="DataStructures\Cell.cs" />
+    <Compile Include="DataStructures\Command.cs" />
+    <Compile Include="DataStructures\Gateway.cs" />
+    <Compile Include="DataStructures\Launcher.cs" />
+    <Compile Include="DataStructures\LinearRing.cs" />
+    <Compile Include="DataStructures\Mission.cs" />
+    <Compile Include="DataStructures\MissionArea.cs" />
+    <Compile Include="DataStructures\MissionConfig.cs" />
+    <Compile Include="DataStructures\MissionPlan.cs" />
+    <Compile Include="DataStructures\Platform.cs" />
+    <Compile Include="DataStructures\PlatformState.cs" />
+    <Compile Include="DataStructures\PoligonGeoJson.cs" />
+    <Compile Include="DataStructures\PoligonGeometry.cs" />
+    <Compile Include="DataStructures\Polygon.cs" />
+    <Compile Include="DataStructures\Position.cs" />
+    <Compile Include="DataStructures\RecoveryPoint.cs" />
+    <Compile Include="DataStructures\Route.cs" />
+    <Compile Include="DataStructures\Sensor.cs" />
+    <Compile Include="DataStructures\Velocity.cs" />
+    <Compile Include="DataStructures\Waypoint.cs" />
+    <Compile Include="DataStructures\World.cs" />
+    <Compile Include="GeoUtils\Geo.cs" />
+    <Compile Include="GeoUtils\GeoConverter.cs" />
+    <Compile Include="GeoUtils\UTM.cs" />
+    <Compile Include="IFS\ApplicationDataPaths.cs" />
+    <Compile Include="IFS\CQuickSort.cs" />
+    <Compile Include="IFS\CUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

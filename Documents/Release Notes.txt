@@ -1,0 +1,14 @@
+6/10/15
+********
+Base Ver. 6/10/2015 - Taken from IPC Computer
+
+- PlatformId cannot get 0 (only 1 or greater)
+
+
+
+
+
+
+Update IP address in the following files:
+LOGIC Project\GEConstants
+GreenEye Project\FleetController\GEConstants
